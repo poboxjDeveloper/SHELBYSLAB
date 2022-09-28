@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import contacts from './api/contacts';
 import Link from 'next/link';
+import Nested from '../components/NestedTest';
 
 export default function Contacts() {
   return (
@@ -10,9 +11,11 @@ export default function Contacts() {
         {contacts.map((contact, ix) => {
           return (
             <li key={contact.id + ix}>
-              <Link href={`contacts/${contact.id}`}>
-                <a>{contact.name}</a>
-              </Link>
+              <Nested>
+                <Link href={`contacts/${contact.id}`}>
+                  <a>{contact.name}</a>
+                </Link>
+              </Nested>
             </li>
           );
         })}

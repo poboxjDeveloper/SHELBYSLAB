@@ -1,0 +1,13 @@
+.block {
+  font-size: 1em;
+  padding: 1.5em;
+  background-color: rgba(157, 187, 212, 0.8);
+}
+
+.title {
+  background-color: red;
+  color: yellow;
+  font-display: auto;
+  font-stretch: expanded;
+  font-size: 0.5em;
+}

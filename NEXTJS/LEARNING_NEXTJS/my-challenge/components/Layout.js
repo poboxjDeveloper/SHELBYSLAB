@@ -7,7 +7,6 @@ import Navigation from './Navigation';
 export default function Layout({ children }) {
   return (
     <div className={styles.container}>
-      {/* insert Menu here */}
       <Navigation />
 
       {children}

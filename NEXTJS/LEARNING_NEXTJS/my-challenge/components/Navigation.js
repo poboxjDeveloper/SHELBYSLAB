@@ -7,8 +7,6 @@ export default function Navigation() {
   const route = router.asPath;
   return (
     <>
-      <pre>Current page: {route}</pre>
-
       <nav>
         <ul>
           <li>
@@ -19,6 +17,7 @@ export default function Navigation() {
           </li>
         </ul>
       </nav>
+      <pre>Current page: {route}</pre>
     </>
   );
 }
