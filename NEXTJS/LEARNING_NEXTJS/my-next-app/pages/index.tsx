@@ -24,6 +24,13 @@ const Home: NextPage = () => {
         </p> */}
 
         <div className={styles.grid}>
+          <Link href="/news/">
+            <a className={styles.card}>
+              <h2>Top Stories</h2>
+              <p>New York Times top Stories.</p>
+            </a>
+          </Link>
+
           <Link href="/about">
             <a className={styles.card}>
               <h2>About page</h2>
