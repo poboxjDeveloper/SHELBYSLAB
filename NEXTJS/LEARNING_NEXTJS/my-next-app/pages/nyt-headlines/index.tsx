@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-export default function News({ results }) {
+export default function News({ results }: { results: any[] }) {
   return (
     <Layout>
       <h1>Top Stories</h1>
