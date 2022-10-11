@@ -9,16 +9,16 @@ const Navigation = (props: Props) => {
     <nav>
       <ol>
         <li>
-          <Link href="/">first</Link>
+          <Link href="/">{props.title}</Link>
         </li>
         <li>
-          <Link href="/home">Home</Link>
+          <Link href="/randomstring">Random string component</Link>
+        </li>
+        <li>
+          <Link href="/hours">Pronet hours component</Link>
         </li>
         <li>
           <Link href="/calculator">Calculator</Link>
-        </li>
-        <li>
-          <Link href="/hours">Hours</Link>
         </li>
       </ol>
     </nav>

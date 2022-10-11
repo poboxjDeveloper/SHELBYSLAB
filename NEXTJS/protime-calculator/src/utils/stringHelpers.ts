@@ -312,7 +312,12 @@ const conjunctions = [
 ];
 const contractions = ['it’s', 'don’t'];
 
-const randomString = (nrOfWords: number) => {
+/**
+ * It returns a random string.
+ * @param {number} nrOfWords - number - the number of words you want to generate
+ * @returns A string of random words.
+ */
+export const randomString = (nrOfWords: number) => {
   let allWords = [
     ...verbs,
     ...nouns,
@@ -343,7 +348,16 @@ const randomString = (nrOfWords: number) => {
   return sentence;
 };
 
-const pickRandom = (wordsArray: string[], nrOfWords: number): string[] => {
+/**
+ * It takes an array of words and a number of words to pick, and returns an array of words
+ * @param {string[]} wordsArray - string[] - an array of strings
+ * @param {number} nrOfWords - number of words to pick
+ * @returns An array of strings.
+ */
+export const pickRandom = (
+  wordsArray: string[],
+  nrOfWords: number
+): string[] => {
   let result = [];
   for (let index = 0; index < nrOfWords; index++) {
     let random = Math.floor(Math.random() * wordsArray.length);
@@ -353,11 +367,14 @@ const pickRandom = (wordsArray: string[], nrOfWords: number): string[] => {
   return result;
 };
 
-const makeString = (wordsArray: string[]): string => {
+/**
+ * It takes an array of strings and returns a string
+ * @param {string[]} wordsArray - string[]
+ * @returns A function that takes an array of strings and returns a string.
+ */
+export const makeString = (wordsArray: string[]): string => {
   let result = '';
   wordsArray.map((word) => (result += ' ' + word));
 
   return result;
 };
-
-export { randomString };

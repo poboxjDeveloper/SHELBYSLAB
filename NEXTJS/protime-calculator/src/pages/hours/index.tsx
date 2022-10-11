@@ -11,9 +11,6 @@ const Hours = ({ categories }: { categories: Category[] }) => {
   return (
     <>
       <h1>The Hours</h1>
-      <div>
-        <RandomStringMessage nrOfWords={Math.floor(Math.random() * 100)} />
-      </div>
       <ul>
         <li>
           <Link
@@ -24,15 +21,10 @@ const Hours = ({ categories }: { categories: Category[] }) => {
             </a>
           </Link>
         </li>
-        <li>
-          <Link href="/hours">
-            <a>See the hours</a>
-          </Link>
-        </li>
       </ul>
       <div>
-        <CategoriesTable categories={categories} />
         <TotalsTable categories={categories} />
+        <CategoriesTable categories={categories} />
       </div>
     </>
   );

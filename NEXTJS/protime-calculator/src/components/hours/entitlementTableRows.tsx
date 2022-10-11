@@ -6,15 +6,20 @@ import {
   pronetBalanceToDays,
 } from 'utils/protimeHelpers';
 
+import css from './entitlementTableRows.module.scss';
+
 const EntitlementTableRows = ({
   data,
 }: {
   data: Array<Entitlement>;
 }): JSX.Element => {
   const getCssClass = (yearCounterAbsenceDefinitionId: number) => {
-    if (daysToTakeThisYear(yearCounterAbsenceDefinitionId)) return 'take';
-    if (daysThatCanBeTransferredToNextYear(yearCounterAbsenceDefinitionId))
-      return 'transfer';
+    if (daysToTakeThisYear(yearCounterAbsenceDefinitionId)) {
+      return css.take;
+    }
+    if (daysThatCanBeTransferredToNextYear(yearCounterAbsenceDefinitionId)) {
+      return css.transfer;
+    }
   };
 
   const children = data.map((e: Entitlement) => {

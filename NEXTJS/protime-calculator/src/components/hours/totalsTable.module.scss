@@ -1,0 +1,13 @@
+@import '../../styles/_variables.scss';
+
+.take {
+  font-size: 1.2em;
+}
+
+.transfer {
+  font-size: 1em;
+}
+
+.total {
+  background-color: transparentize($neutralColor, 0.9);
+}

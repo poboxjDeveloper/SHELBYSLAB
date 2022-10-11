@@ -32,14 +32,6 @@ table {
   }
 }
 
-.take {
-  background-color: lighten($color: #18fc04, $amount: 20);
-}
-
-.transfer {
-  background-color: lighten($color: #fc04e7, $amount: 40);
-}
-
 * {
   box-sizing: border-box;
 }

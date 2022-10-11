@@ -1,6 +1,6 @@
 import { Category } from 'interfaces/Category';
 import { Entitlement } from 'interfaces/Entitlement';
-import { useEffect, useState } from 'react';
+import css from './totalsTable.module.scss';
 import {
   daysThatCanBeTransferredToNextYear,
   daysToTakeThisYear,
@@ -9,9 +9,6 @@ import {
 } from 'utils/protimeHelpers';
 
 const TotalsTable = ({ categories }: { categories: Array<Category> }) => {
-  //   const [totalMinutesToTake, setTotalMinutesToTake] = useState(0);
-  //   const [totalMinutesToTransfer, setTotalMinutesToTransfer] = useState(0);
-
   let totalMinutesToTake = 0;
   let totalMinutesToTransfer = 0;
   let totalDaysToTake = 0;
@@ -56,22 +53,22 @@ const TotalsTable = ({ categories }: { categories: Array<Category> }) => {
       );
     }
   };
+
   calculateMinutes();
 
   return (
     <>
-      <h2>Totals table</h2>
       <table>
         <tbody>
-          <tr>
+          <tr className={css.take}>
             <th>Total hours to take</th>
             <td>{totalMinutesToTake / 60}</td>
-            <td>{totalDaysToTake}</td>
+            <td className={css.total}>{totalDaysToTake}</td>
           </tr>
-          <tr>
+          <tr className={css.transfer}>
             <th>Total hours to transfer</th>
             <td>{totalMinutesToTransfer / 60}</td>
-            <td>{totalDaysToTransfer}</td>
+            <td className={css.total}>{totalDaysToTransfer}</td>
           </tr>
         </tbody>
       </table>

@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { randomString } from 'utils/randomString';
+import { randomString } from 'utils/stringHelpers';
 import css from './randomStringMessage.module.scss';
 
 const RandomStringMessage = ({
   nrOfWords = 50,
 }: {
-  nrOfWords: number | undefined;
+  nrOfWords?: number;
 }): JSX.Element => {
   const [result, setResult] = useState(<></>);
 

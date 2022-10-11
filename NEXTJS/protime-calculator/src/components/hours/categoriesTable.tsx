@@ -9,7 +9,6 @@ const CategoriesTable = ({ categories }: { categories: Array<Category> }) => {
 
   return (
     <>
-      <h2>Categories table</h2>
       <table className={css.table}>
         <tbody>
           <tr>
