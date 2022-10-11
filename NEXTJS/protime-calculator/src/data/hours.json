@@ -1,0 +1,19 @@
+{
+  "hours": [
+    { "key": "Extra legaal verlof Y -1", "value": "0:00" },
+    { "key": "Wettelijk verlof", "value": "86:24" },
+    { "key": "Feestdag weekend", "value": "21:36" },
+    { "key": "Historische recuperatie 2022", "value": "94:27" },
+    { "key": "Extra legaal verlof basis", "value": "36:00" },
+    { "key": "Kerst & Nieuw", "value": "7:12" },
+    { "key": "Anciënniteit verlof", "value": "21:36" },
+    { "key": "Extra legaal verlof PC307", "value": "0:00" },
+    { "key": "Historische recuperatie 2023", "value": "94:27" },
+    { "key": "Historische recuperatie 2024", "value": "94:27" },
+    { "key": "Historische recuperatie 2025", "value": "94:27" },
+    { "key": "Historische recuperatie 2026", "value": "94:27" },
+    { "key": "Historisch verlof", "value": "0:00" },
+    { "key": "Aanvullende vakantie", "value": "0:00" },
+    { "key": "Jeugdvakantie", "value": "0:00" }
+  ]
+}
