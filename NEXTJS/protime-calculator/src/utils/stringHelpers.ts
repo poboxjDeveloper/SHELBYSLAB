@@ -344,7 +344,7 @@ export const randomString = (nrOfWords: number) => {
   });
 
   const sentence = makeString(pickRandom(allWords, nrOfWords));
-  console.log('sentence', sentence);
+  // console.log('sentence', sentence);
   return sentence;
 };
 
@@ -361,7 +361,7 @@ export const pickRandom = (
   let result = [];
   for (let index = 0; index < nrOfWords; index++) {
     let random = Math.floor(Math.random() * wordsArray.length);
-    console.log('random', random, 'word', wordsArray[random]);
+    // console.log('random', random, 'word', wordsArray[random]);
     result.push(wordsArray[random]);
   }
   return result;

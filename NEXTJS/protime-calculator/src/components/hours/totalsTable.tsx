@@ -9,6 +9,11 @@ import {
 } from 'utils/protimeHelpers';
 
 const TotalsTable = ({ categories }: { categories: Array<Category> }) => {
+  console.log(
+    'TotalsTable: incomming categories',
+    categories,
+    typeof categories
+  );
   let totalMinutesToTake = 0;
   let totalMinutesToTransfer = 0;
   let totalDaysToTake = 0;

@@ -24,7 +24,7 @@ export const pronetBalanceToMinutes = (balance: string): number => {
   const minutes = parseInt(balance.split(':')[1]);
   const totalMinutes = hours + minutes;
 
-  console.log('pronetBalanceToMinutes', balance, totalMinutes);
+  // console.log('pronetBalanceToMinutes', balance, totalMinutes);
 
   return totalMinutes;
 };
@@ -38,7 +38,7 @@ export const pronetBalanceToHours = (balance: string): number => {
   const minutes = pronetBalanceToDays(balance);
   const days = minutes / 60;
 
-  console.log('pronetBalanceToHours', balance, days);
+  // console.log('pronetBalanceToHours', balance, days);
 
   return days;
 };
@@ -62,7 +62,7 @@ export const pronetBalanceToDays = (
     days = minutes / oneDayInMinutes;
   }
 
-  console.log('pronetBalanceToDays', balance, days);
+  // console.log('pronetBalanceToDays', balance, days);
 
   return days;
 };
@@ -81,7 +81,7 @@ export const dayOrDaysLabel = (balance: string): string => {
     result = 'day';
   }
 
-  console.log('dayOrDaysLabel', balance, result);
+  // console.log('dayOrDaysLabel', balance, result);
 
   return result;
 };

@@ -1,12 +1,20 @@
 import CategoriesTable from 'components/hours/categoriesTable';
 import TotalsTable from 'components/hours/totalsTable';
-import { GetServerSideProps } from 'next';
+import { useCategories } from 'hooks/useCategories';
 import Link from 'next/link';
 import { pronetDateString } from 'utils/protimeHelpers';
-import type { Category } from '../../interfaces/Category';
 
-const Hours = ({ categories }: { categories: Category[] }) => {
+const HoursFromHook = () => {
   const dateString = pronetDateString();
+  const { categories, isLoading, isError } = useCategories();
+
+  if (isError) return <>Sorry an error has occurred.</>;
+  if (isLoading) return <>Still loading...</>;
+
+  console.log(typeof categories, typeof categories.categories);
+  const result =
+    typeof categories === 'object' ? categories.categories : categories;
+
   return (
     <>
       <h1>The Hours</h1>
@@ -22,29 +30,11 @@ const Hours = ({ categories }: { categories: Category[] }) => {
         </li>
       </ul>
       <div>
-        <TotalsTable categories={categories} />
-        <CategoriesTable categories={categories} />
+        <TotalsTable categories={result} />
+        <CategoriesTable categories={result} />
       </div>
     </>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const url = `http://localhost:3000/api/categories`;
-    const res = await fetch(url);
-    const categories: Category[] = await res.json();
-
-    console.log('the categories', categories);
-    return {
-      props: categories,
-    };
-  } catch (e) {
-    console.log(e);
-    return {
-      props: {},
-    };
-  }
-};
-
-export default Hours;
+export default HoursFromHook;
