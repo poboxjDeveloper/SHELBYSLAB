@@ -4,6 +4,7 @@ import { MouseEventHandler, MouseEvent, useEffect, useState } from 'react';
 import { randomString } from 'utils/stringHelpers';
 
 const Information = () => {
+  const [msg, setMsg] = useState<string>('click to change');
   const [info, setInfo] = useState<TKeyValue[]>([]);
 
   //   useEffect(() => {
@@ -17,7 +18,7 @@ const Information = () => {
     console.log('useEffect has been triggered');
   }, []);
 
-  const addRandomString = () => {
+  const addRandomString = (): TKeyValue[] => {
     setInfo(() => {
       info.push({
         key: (Math.random() * 1000).toString() + '--addRandomString',
@@ -25,13 +26,18 @@ const Information = () => {
       });
       return info;
     });
+
     console.log('addRandomString', info);
+
+    return info;
   };
+
   const handleButtonClick: MouseEventHandler<HTMLButtonElement> = (
     e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
   ): void => {
     console.log(e);
-    addRandomString();
+    setInfo(addRandomString());
+    setMsg(randomString(20));
   };
 
   return (
@@ -55,9 +61,9 @@ const Information = () => {
         }
         name="addRandomString"
       >
-        Add
+        Random Message
       </button>
-      <div>{JSON.stringify(info)}</div>
+      <div>{msg}</div>
 
       <InformationTable
         headers={['DYNAMIC FIRST', 'DYNAMIC SECOND']}
@@ -68,3 +74,13 @@ const Information = () => {
 };
 
 export default Information;
+
+export async function getStaticProps() {
+  const info: TKeyValue[] = [];
+
+  return {
+    props: {
+      info,
+    }, // will be passed to the page component as props
+  };
+}
