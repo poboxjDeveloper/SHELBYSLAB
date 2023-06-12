@@ -1,9 +1,0 @@
-//check this out...
-// currently infinite loop and redirect...
-import { NextResponse, NextRequest } from 'next/server';
-
-export function middleware(req: NextRequest): Response {
-  //return NextResponse.json({ message: 'response from the middleware' });
-  console.log(req, req.url);
-  return NextResponse.redirect(new URL('/subpages/subpage', req.url));
-}
