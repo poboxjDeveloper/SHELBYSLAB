@@ -51,8 +51,13 @@ const range = (start, end, step) => {
  */
 function doOrder(array) {
   console.log('order the array', array);
-  array.sort((a, b) => a > b);
-  return array;
+  const ordered = array.sort((a, b) => {
+    if (a === b) return 0;
+    if (a > b) return 1;
+    return -1;
+  });
+  console.log('the ordered:', ordered);
+  return ordered;
 }
 
 console.log(doOrder([1, 3687, 5, 7421]));

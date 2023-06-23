@@ -28,16 +28,40 @@ server.listen(port, hostname, () => {
 // --------------------------------------------------------------------------------------------------
 
 */
+// const express = require('express');
+// const app = express();
+// const port = 3000;
+
+// app.get('/', (req, res) => {
+//   res.send('Hello World!');
+// });
+
+// app.listen(port, () => {
+//   console.log(
+//     `Example app listening on port ${port}!: http://localhost:${port}`
+//   );
+// });
+
+/*
+//  example of the express server that serves html file.
+//  
+*/
+
 const express = require('express');
+const path = require('path');
+
 const app = express();
 const port = 3000;
 
+// Define the path to your HTML file
+const htmlFilePath = path.join(__dirname, 'index.html');
+
+// Set up a route to serve the HTML file
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.sendFile(htmlFilePath);
 });
 
+// Start the server
 app.listen(port, () => {
-  console.log(
-    `Example app listening on port ${port}!: http://localhost:${port}`
-  );
+  console.log(`Server is running on http://localhost:${port}`);
 });
