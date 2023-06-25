@@ -1,0 +1,1 @@
+{"mappings":";;;;;AAAO,SAAS,0CAAI,CAAS,EAAE,CAAS;IACtC,OAAO,IAAI;AACb","sources":["src/index.ts"],"sourcesContent":["export function add(a: number, b: number): number {\r\n  return a + b;\r\n}\r\n"],"names":[],"version":3,"file":"main.js.map"}

@@ -43,3 +43,6 @@ sketch
 .history/
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#VisualStudioCode
+
+
+.parcel-cache
