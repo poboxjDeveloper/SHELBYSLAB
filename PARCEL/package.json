@@ -1,10 +1,15 @@
 {
-  "name": "have-a-crack-at-ot",
+  "name": "have-a-crack-at-it",
   "version": "1.0.0",
   "source": "src/index.ts",
   "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
   "devDependencies": {
-    "parcel": "latest"
+    "@parcel/packager-ts": "^2.9.3",
+    "@parcel/transformer-typescript-types": "^2.9.3",
+    "parcel": "latest",
+    "typescript": "^5.1.3"
   },
   "scripts": {
     "watch": "parcel watch",
