@@ -1,3 +1,8 @@
-# PARCEL
+# ELOQUENT JAVASCRIPT
 
-[Go over this doc](https://parceljs.org/getting-started/library/)
+This is an attempt to go over all the excersises from the [online book](https://eloquentjavascript.net/).
+
+## LINKS & information
+
+- **Development environment**: [Parcel](https://parceljs.org/getting-started/library/)
+- [Code Sandbox](https://eloquentjavascript.net/code/)
