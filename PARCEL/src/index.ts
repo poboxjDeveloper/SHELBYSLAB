@@ -33,6 +33,23 @@ import {
   Sample003_03,
 } from './003_functions';
 
+import {
+  ArrayFunctions,
+  ArrayToList,
+  DataSets,
+  ListAndArrayStuff,
+  ListToArray,
+  Methods,
+  Mutability,
+  MyJournal,
+  Objects,
+  Properties,
+  Rest,
+  ReversingAnArray,
+  StringFunctions,
+  TheSumOfARange,
+} from './004_objects-arrays';
+
 // ---------------------------------------------------------------------
 console.groupCollapsed('000 Introduction');
 
@@ -73,7 +90,7 @@ Excercises002();
 console.groupEnd();
 
 // ---------------------------------------------------------------------
-console.group('003 Functions');
+console.groupCollapsed('003 Functions');
 console.group('Theory');
 console.log(DefiningAFunction, title, reset);
 console.log(BindingsAndScopes, title, reset, bold, reset);
@@ -87,5 +104,31 @@ console.log(Closure, title, reset);
 console.log(Sample003_02());
 console.log(Recursion, title, reset);
 console.log(Sample003_03());
+console.groupEnd();
+console.groupEnd();
+
+// ---------------------------------------------------------------------
+console.group('004 Data Structures');
+console.group('Objects and Arrays');
+console.log(DataSets, title, reset);
+console.log(Properties, title, reset);
+console.log(Methods, title, reset);
+console.log(Objects, title, reset);
+console.log(Mutability, title, reset);
+console.groupEnd();
+console.group('Functions for Arrays and strings');
+console.log(ArrayFunctions, title, reset);
+console.log(StringFunctions, title, reset);
+console.log('DO DO DO'.repeat(10));
+console.log(Rest, title, reset);
+let words = ['never', 'fully'];
+console.log(['will', ...words, 'understand']);
+console.log(MyJournal());
+console.log(TheSumOfARange());
+console.log(ReversingAnArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(ReversingAnArray(['A', 'B', 'C', 'D', 'E']));
+
+console.log(ListAndArrayStuff());
+
 console.groupEnd();
 console.groupEnd();
