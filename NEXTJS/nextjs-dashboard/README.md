@@ -39,3 +39,5 @@ open [http://localhost:3000/](http://localhost:3000/)
 ### Fonts and Images
 
 - usage of google fonts can be seen in action in the [font.ts](/app/ui/fonts.ts) file. And imported in the [layout.tsx](/app/layout.tsx) file.
+- info about adding multiple fonts: [see docs](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#using-multiple-fonts).
+- info about the options for the fonts: [see docs](https://nextjs.org/docs/app/api-reference/components/font#font-function-arguments)
