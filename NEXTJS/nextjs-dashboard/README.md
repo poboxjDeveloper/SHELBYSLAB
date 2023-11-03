@@ -59,3 +59,5 @@ open [http://localhost:3000/](http://localhost:3000/)
 ### Routing, Layouts and Pages
 
 - use of file-system routing. [see](https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages)
+- colocation of pages and components: info [here](https://nextjs.org/docs/app/building-your-application/routing#colocation) and [here](https://nextjs.org/docs/app/building-your-application/routing/colocation)
+- use of partial rendering via layout pages. find info [here](https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating#3-partial-rendering)
