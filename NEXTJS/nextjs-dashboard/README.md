@@ -20,7 +20,15 @@ Git page [see](https://github.com/vercel/next-learn/tree/main/dashboard/starter-
 
 open [http://localhost:3000/](http://localhost:3000/)
 
-## Extra serivces
+## Extra services and documentation
+
+### Development Services
 
 - [mock api](https://mockapi.io/): mock data (github account: poboxjDeveloper)
-- [prisma orm](https://www.prisma.io/) map data from db to typescript types or interfaces.
+- [prisma orm](https://www.prisma.io/): map data from db to typescript types or interfaces.
+
+### Styling
+
+- [tailwind css](https://tailwindcss.com/): all styling for the components.
+- [styling in nextjs](https://nextjs.org/docs/pages/building-your-application/styling): ways to style the modules
+- [css modules](https://nextjs.org/docs/pages/building-your-application/styling/css-modules): css modules: .module.css files.
