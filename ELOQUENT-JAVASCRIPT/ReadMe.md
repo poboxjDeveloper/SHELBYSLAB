@@ -5,4 +5,5 @@ This is an attempt to go over all the excersises from the [online book](https://
 ## LINKS & information
 
 - **Development environment**: [Parcel](https://parceljs.org/getting-started/library/)
-- [Code Sandbox](https://eloquentjavascript.net/code/)
+- [Code Sandbox Eloquent Javascript](https://eloquentjavascript.net/code/)
+- [Typescript](https://www.typescriptlang.org/)
