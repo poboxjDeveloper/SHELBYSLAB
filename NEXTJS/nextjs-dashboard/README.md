@@ -38,6 +38,24 @@ open [http://localhost:3000/](http://localhost:3000/)
 
 ### Fonts and Images
 
+#### Fonts
+
 - usage of google fonts can be seen in action in the [font.ts](/app/ui/fonts.ts) file. And imported in the [layout.tsx](/app/layout.tsx) file.
 - info about adding multiple fonts: [see docs](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#using-multiple-fonts).
 - info about the options for the fonts: [see docs](https://nextjs.org/docs/app/api-reference/components/font#font-function-arguments)
+
+#### Images
+
+- use the 'next/image' component. [info see](https://nextjs.org/docs/pages/api-reference/components/image)
+- used in the [page.tsx](/app/page.tsx) file.
+
+#### Extra info
+
+- [Image Opitmization Docs](https://nextjs.org/docs/app/building-your-application/optimizing/images)
+- [Font Optimization Docs](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)
+- [Improving Web Performance with images (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Performance/Multimedia)
+- [Web Fonts (MDN)](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
+
+### Routing, Layouts and Pages
+
+- use of file-system routing. [see](https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages)
