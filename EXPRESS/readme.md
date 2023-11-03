@@ -15,7 +15,7 @@ Steps taken:
 
 ### Installed Packages
 
-#### DEV
+#### Development
 
 - [ESLint](https://eslint.org/)
 - [jsDoc](https://github.com/jsdoc/jsdoc)
