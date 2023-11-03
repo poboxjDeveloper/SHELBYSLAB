@@ -32,3 +32,10 @@ open [http://localhost:3000/](http://localhost:3000/)
 - [tailwind css](https://tailwindcss.com/): all styling for the components.
 - [styling in nextjs](https://nextjs.org/docs/pages/building-your-application/styling): ways to style the modules
 - [css modules](https://nextjs.org/docs/pages/building-your-application/styling/css-modules): css modules: .module.css files.
+- [clsx](https://www.npmjs.com/package/clsx): construct className strings conditionally. documentation [see](https://github.com/lukeed/clsx). usage see [status.tsx](/app/ui/invoices/status.tsx)
+- [sass](https://nextjs.org/docs/app/building-your-application/styling/sass): use .sass files in the app. Build in support by next-js.
+- [CSS-in-JS](https://nextjs.org/docs/app/building-your-application/styling/css-in-js): **TODO:** check out the documentation...
+
+### Fonts and Images
+
+- usage of google fonts can be seen in action in the [font.ts](/app/ui/fonts.ts) file. And imported in the [layout.tsx](/app/layout.tsx) file.
