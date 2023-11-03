@@ -1,5 +1,5 @@
 import { journalEvents, phi, tableFor } from './04_data';
-import { bold, title } from '../config';
+import { bold, reset, title } from '../config';
 import JOURNAL from './journal';
 
 export const DataSets = `
@@ -250,13 +250,18 @@ export const ListAndArrayStuff = () => {
   console.log('\tresult:', ArrayToList([]));
   console.log('\tresult:', ArrayToList([10]));
   console.log('\tresult:', ArrayToList([10, 20]));
-  console.log('\tresult:', ArrayToList([10, 20, 30, 40]));
+  console.log('\tresult:', ArrayToList([10, 20, 30]));
+  console.groupEnd();
+
+  console.group(`%cNth`, title);
+  console.log(Nth(ArrayToList([200, 300]), 1));
   console.groupEnd();
 
   console.group(`%cListToArray`, title);
   console.log('\tresult:', ListToArray(ArrayToList([])));
   console.log('\tresult:', ListToArray(ArrayToList([10])));
   console.log('\tresult:', ListToArray(ArrayToList([10, 20])));
+  console.log('\tresult:', ListToArray(ArrayToList([10, 20, 30])));
   console.log('\tresult:', ListToArray(ArrayToList([10, 20, 30, 40])));
   console.groupEnd();
 
@@ -288,8 +293,8 @@ export const ArrayToList = (inputs: number[]) => {
 };
 
 export const ListToArray = (list: List | null) => {
-  const Convert = (list: List, result: number[]) => {
-    console.group('%cexecute Convert', bold);
+  const Convert = (list: List, result: number[]): number[] => {
+    console.group('%cExecute Convert', title);
     console.log('|_convert list:', list);
 
     for (let key of Object.keys(list)) {
@@ -302,21 +307,19 @@ export const ListToArray = (list: List | null) => {
       }
       if (key === 'rest') {
         const rest: List | null = list[key];
-        console.log('\t|__rest->', rest);
-        if (rest !== null) {
+        if (rest) {
+          console.log('\t|__rest->', rest);
           return Convert(rest, result);
         }
       }
     }
 
-    console.log('result', result);
     console.groupEnd();
-
     return result;
   };
 
   const OverallResult: number[] = [];
-  if (list === null) return;
+  if (!list) return;
 
   console.groupCollapsed('ListToArray');
   console.log('|_list: ', list);
@@ -335,4 +338,15 @@ export const PrependToList = (value: number | undefined, rest: List | null) => {
   }
 
   return undefined;
+};
+
+export const Nth = (list: List, ix: number) => {
+  let counter = 1;
+  for (let node: List | null = list; node; node = node.rest) {
+    console.log('node: ', node);
+    if (counter === ix) {
+      return node.value;
+    }
+    counter++;
+  }
 };
