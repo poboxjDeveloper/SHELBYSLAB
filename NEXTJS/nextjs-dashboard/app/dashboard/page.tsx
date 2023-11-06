@@ -24,6 +24,12 @@ export default async function Page() {
         /> */}
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
+        {/* This gives an error in which should be addressed by the correct
+        versions. But it is not:
+        https://nextjs.org/docs/app/building-your-application/configuring/typescript#async-server-component-typescript-error
+        'RevenueChart' cannot be used as a JSX component.
+  Its return type 'Promise<Element>' is not a valid JSX element.
+    Type 'Promise<Element>' is missing the following properties from type 'ReactElement<any, any>': type, props, key */}
         <RevenueChart revenue={revenue} />
         <LatestInvoices latestInvoices={latestInvoices} />
       </div>
