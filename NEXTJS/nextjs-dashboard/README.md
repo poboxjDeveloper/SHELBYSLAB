@@ -61,3 +61,25 @@ open [http://localhost:3000/](http://localhost:3000/)
 - use of file-system routing. [see](https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages)
 - colocation of pages and components: info [here](https://nextjs.org/docs/app/building-your-application/routing#colocation) and [here](https://nextjs.org/docs/app/building-your-application/routing/colocation)
 - use of partial rendering via layout pages. find info [here](https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating#3-partial-rendering)
+
+### Linking and navigation between pages
+
+- use the [Link](https://nextjs.org/docs/app/api-reference/components/link) component to make client-side navigation possible.
+- add the "use client" directive to be able to use the next.js hook [usePathname](https://nextjs.org/docs/app/api-reference/functions/use-pathname) to show which page we are currently on.
+- code splitting and prefetching is done by next.js based on the Link component. [More info](https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating#how-routing-and-navigation-works)
+
+### Postgres database setup
+
+- setup the vercel project. [See this page](https://nextjs.org/learn/dashboard-app/setting-up-your-database)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres)
+- [Vercel Postgres Quickstart](https://vercel.com/docs/storage/vercel-postgres/quickstart)
+- [Vercel Postgres SDK](https://vercel.com/docs/storage/vercel-postgres/sdk)
+- [Neon](https://neon.tech/) (Serverless Postgres)
+
+### Data fetching
+
+- API endpoints can be created trough [route handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
+- [Data Fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating) information.
+- Using an [ORM](https://vercel.com/docs/storage/vercel-postgres/using-an-orm#)
+- Using 'sql' from the [Vercel Postgres SDK](https://vercel.com/docs/storage/vercel-postgres/sdk#sql)
