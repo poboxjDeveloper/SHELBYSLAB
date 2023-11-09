@@ -83,3 +83,22 @@ open [http://localhost:3000/](http://localhost:3000/)
 - [Data Fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating) information.
 - Using an [ORM](https://vercel.com/docs/storage/vercel-postgres/using-an-orm#)
 - Using 'sql' from the [Vercel Postgres SDK](https://vercel.com/docs/storage/vercel-postgres/sdk#sql)
+
+#### Request Waterfall
+
+A "waterfall" refers to a sequence of network requests that depend on the completion of previous requests. In the case of data fetching, each request can only begin once the previous request has returned data.
+
+![request waterfall](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fsequential-parallel-data-fetching.png&w=1920&q=75&dpl=dpl_3Wxwbu8W2PMQSCXNu1niptgRaw1P)
+
+#### Parallel datafetching
+
+A "parallel" pattern triggers all requests at the same time. There is one disadvantage of using this JavaScript pattern: what happens if one data request is slower than all the others?
+
+- [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+- [Promise.allSetteld()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
+
+### Static and Dynamic Rendering
+
+![static rendering vs dynamic](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fstatic-site-generation.png&w=1920&q=75&dpl=dpl_Ejtt9BCyCFNeRJdBoVsM9Es9x8xe)
+
+- add dynamic content: `import { unstable_noStore as noStore } from 'next/cache';`

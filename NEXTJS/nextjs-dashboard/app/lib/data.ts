@@ -7,6 +7,7 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
+  Invoice,
 } from './definitions';
 import { formatCurrency } from './utils';
 
@@ -90,7 +91,7 @@ export async function fetchCardData() {
 const ITEMS_PER_PAGE = 6;
 export async function fetchFilteredInvoices(
   query: string,
-  currentPage: number,
+  currentPage: number
 ) {
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
@@ -167,6 +168,30 @@ export async function fetchInvoiceById(id: string) {
     console.error('Database Error:', error);
   }
 }
+
+// export async function fetchTotalPayedInvoices():number {
+//   try {
+//     const data = await sql`
+//       SELECT COUNT(*)
+//       FROM invoices
+//     `;
+//     console.log('total invoices', data, data.rows[0].count, data.rowCount);
+//     return data.rows[0].count;
+//   } catch (error) {
+//     console.error('Database Error:', error);
+//   }
+// }
+
+// export async function fetchCardData() {
+//   try {
+//     const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
+//     const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
+
+//     return { invoiceCountPromise, customerCountPromise };
+//   } catch (error) {
+//     console.error('Database Error:', error);
+//   }
+// }
 
 export async function fetchCustomers() {
   try {
