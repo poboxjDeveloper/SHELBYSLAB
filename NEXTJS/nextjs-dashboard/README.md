@@ -101,4 +101,16 @@ A "parallel" pattern triggers all requests at the same time. There is one disadv
 
 ![static rendering vs dynamic](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fstatic-site-generation.png&w=1920&q=75&dpl=dpl_Ejtt9BCyCFNeRJdBoVsM9Es9x8xe)
 
-- add dynamic content: `import { unstable_noStore as noStore } from 'next/cache';`
+- add dynamic content: `import { unstable_noStore as noStore } from 'next/cache';` (**_this is still unstable. Nextjs 14 feature_**)
+  - side note: this gave an error [version staleness](https://nextjs.org/docs/messages/version-staleness). As this is still in dev, we need to update regularly.
+- alternatively use: [route segment config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config), this is a stable feature.
+
+### Problem with long data fetches
+
+![long data fetch](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fsequential-parallel-data-fetching.png&w=1920&q=75&dpl=dpl_Ejtt9BCyCFNeRJdBoVsM9Es9x8xe)
+
+Everything has to wait until the latest data is retrieved.
+
+Which brings us to a common challenge developers have to solve:
+
+**_With dynamic rendering, your application is only as fast as your slowest data fetch._**
