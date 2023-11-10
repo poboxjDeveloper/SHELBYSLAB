@@ -151,5 +151,22 @@ Which brings us to a common challenge developers have to solve:
 
 - use `<Suspense>`from `import { Suspense } from 'react';`
 - create a fallback and wrap the component that needs to stream into the `<Suspense>`component.
-- `<Suspense fallback={<RevenueChartSkeleton />}><RevenueChart /></Suspense>`
-- the data logic and loading should be in the `<RevenueChart>`component
+- `<Suspense fallback={<ComponentSkeleton />}><Component /></Suspense>`
+- the data logic and loading should be in the `<Component>`component
+- In general, it's good practice to move your data fetches down to the components that need it, and then wrap those components in Suspense
+
+#### Partial Prerendering or PPR (still experimental in vs 14)
+
+- [example](https://www.partialprerendering.com/)
+- [more info](https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model0)
+
+When to use:
+
+- if you call [dynamic functions](https://nextjs.org/docs/app/building-your-application/routing/route-handlers#dynamic-functions) in a route -> your whole route becomes dynamic
+- isolate dynamic from static components
+
+![partial prerendering](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fthinking-in-ppr.png&w=1920&q=75&dpl=dpl_FANPWgemGx3BiDxoqrrspVnCrSow)
+
+- [React 18 keynote](https://react.dev/blog/2021/12/17/react-conf-2021-recap#react-18-and-concurrent-features) for more information on `<Suspense>`
+- [More info (outdated, but interseting)](https://17.reactjs.org/docs/concurrent-mode-suspense.html)
+- [React documentation on Suspense](https://react.dev/reference/react/Suspense)
