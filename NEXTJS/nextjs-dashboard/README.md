@@ -148,3 +148,8 @@ Which brings us to a common challenge developers have to solve:
 - [route groups info](https://nextjs.org/docs/app/building-your-application/routing/route-groups)
 
 ##### streaming a component
+
+- use `<Suspense>`from `import { Suspense } from 'react';`
+- create a fallback and wrap the component that needs to stream into the `<Suspense>`component.
+- `<Suspense fallback={<RevenueChartSkeleton />}><RevenueChart /></Suspense>`
+- the data logic and loading should be in the `<RevenueChart>`component
