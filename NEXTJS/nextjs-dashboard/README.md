@@ -97,7 +97,7 @@ A "parallel" pattern triggers all requests at the same time. There is one disadv
 - [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 - [Promise.allSetteld()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
 
-### Static and Dynamic Rendering
+#### Static and Dynamic Rendering
 
 ![static rendering vs dynamic](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fstatic-site-generation.png&w=1920&q=75&dpl=dpl_Ejtt9BCyCFNeRJdBoVsM9Es9x8xe)
 
@@ -105,7 +105,7 @@ A "parallel" pattern triggers all requests at the same time. There is one disadv
   - side note: this gave an error [version staleness](https://nextjs.org/docs/messages/version-staleness). As this is still in dev, we need to update regularly.
 - alternatively use: [route segment config](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config), this is a stable feature.
 
-### Problem with long data fetches
+#### Problem with long data fetches
 
 ![long data fetch](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fsequential-parallel-data-fetching.png&w=1920&q=75&dpl=dpl_Ejtt9BCyCFNeRJdBoVsM9Es9x8xe)
 
@@ -114,3 +114,28 @@ Everything has to wait until the latest data is retrieved.
 Which brings us to a common challenge developers have to solve:
 
 **_With dynamic rendering, your application is only as fast as your slowest data fetch._**
+
+### Streaming
+
+![streaming](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fserver-rendering-with-streaming.png&w=1920&q=75&dpl=dpl_Ejtt9BCyCFNeRJdBoVsM9Es9x8xe)
+
+- data fetching and rendering at the same time.
+- streaming >< waterfall
+- works well with react's component model
+
+![streaming data and rendering](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Fserver-rendering-with-streaming-chart.png&w=1920&q=75&dpl=dpl_Ejtt9BCyCFNeRJdBoVsM9Es9x8xe)
+
+#### Implementation
+
+- loading.tsx
+- `<Suspense>`
+
+##### loading.tsx
+
+- special next.js file build upon suspend
+- creates loading content while loading
+- navigation can be used as this is statically loaded
+
+##### loading skeletons
+
+- simpified version of the ui
