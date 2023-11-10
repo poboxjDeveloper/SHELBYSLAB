@@ -138,4 +138,11 @@ Which brings us to a common challenge developers have to solve:
 
 ##### loading skeletons
 
-- simpified version of the ui
+- simpified version of the ui added to the loading.tsx page
+
+##### route groups
+
+![route group](https://nextjs.org/_next/image?url=%2Flearn%2Fdark%2Froute-group.png&w=1920&q=75&dpl=dpl_Ejtt9BCyCFNeRJdBoVsM9Es9x8xe)
+
+- loading.tsx file will only apply to the dashboard overview page
+- [route groups info](https://nextjs.org/docs/app/building-your-application/routing/route-groups)
