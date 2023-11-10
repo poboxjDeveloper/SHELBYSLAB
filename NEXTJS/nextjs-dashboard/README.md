@@ -146,3 +146,5 @@ Which brings us to a common challenge developers have to solve:
 
 - loading.tsx file will only apply to the dashboard overview page
 - [route groups info](https://nextjs.org/docs/app/building-your-application/routing/route-groups)
+
+##### streaming a component

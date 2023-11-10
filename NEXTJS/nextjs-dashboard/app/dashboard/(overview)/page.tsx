@@ -2,14 +2,11 @@ import { Card } from '@/app/ui/dashboard/cards';
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lusitana } from '@/app/ui/fonts';
-import {
-  fetchLatestInvoices,
-  fetchRevenue,
-  fetchCardData,
-} from '@/app/lib/data';
+import { fetchLatestInvoices, fetchCardData } from '@/app/lib/data';
+import { Suspense } from 'react';
+import { RevenueChartSkeleton } from '@/app/ui/skeletons';
 
 export default async function Page() {
-  const revenue = await fetchRevenue();
   const latestInvoices = await fetchLatestInvoices();
   const {
     numberOfCustomers,
@@ -40,7 +37,9 @@ export default async function Page() {
         'RevenueChart' cannot be used as a JSX component.
   Its return type 'Promise<Element>' is not a valid JSX element.
     Type 'Promise<Element>' is missing the following properties from type 'ReactElement<any, any>': type, props, key */}
-        <RevenueChart revenue={revenue} />
+        <Suspense fallback={<RevenueChartSkeleton />}>
+          <RevenueChart />
+        </Suspense>
         <LatestInvoices latestInvoices={latestInvoices} />
       </div>
     </main>
